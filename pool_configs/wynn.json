@@ -1,0 +1,64 @@
+{
+    "enabled": true,
+    "coin": "wynn.json",
+
+    "auxes": [ // Defines auxillery coins
+    ],
+    "address": "_____HereSetYourWalletAddress_____",
+
+    "rewardRecipients": {
+    },
+
+    "paymentProcessing": {
+        "enabled": false,
+        "paymentInterval": 600,
+        "minimumPayment": 50,
+        "daemon": {
+            "host": "_____HereSetYourWalletProgramAddress_____",
+            "port": _____HereSetYourWalletRpcPort_____,
+            "user": "_____HereSetYourWalletRpcUsernmae_____",
+            "password": "_____HereSetYourWalletPassword_____"
+        }
+    },
+
+    "ports": {
+        "3032": {
+            "diff": 0.001,
+            "varDiff": {
+                "minDiff": 0.001,
+                "maxDiff": 512,
+                "targetTime": 15,
+                "retargetTime": 90,
+                "variancePercent": 30
+            }
+        }
+    },
+
+    "daemons": [
+        {
+            "host": "_____HereSetYourWalletProgramAddress_____",
+            "port": _____HereSetYourWalletRpcPort_____ ,
+            "user": "_____HereSetYourWalletRpcUsernmae_____",
+            "password": "_____HereSetYourWalletPassword_____"
+        }
+    ],
+
+    "p2p": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 19333,
+        "disableTransactions": false
+    },
+
+    "mposMode": {
+        "enabled": false,
+        "host": "127.0.0.1",
+        "port": 3306,
+        "user": "me",
+        "password": "mypass",
+        "database": "ltc",
+        "checkPassword": false,
+        "autoCreateWorker": false
+    }
+
+}

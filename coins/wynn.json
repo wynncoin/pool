@@ -1,0 +1,7 @@
+{
+    "name": "wynn coin",
+    "symbol": "WYC",
+    "algorithm": "sha256tx",
+    "peerMagic": "88667878",
+    "peerMagicTestnet": "88667878"
+}

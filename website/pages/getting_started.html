@@ -1,0 +1,45 @@
+<div class="row">
+	<article class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+		<div class="jarviswidget jarviswidget-color-blueDark" id="wid-id-0" data-widget-editbutton="false">
+			<header>
+				<span class="widget-icon"> <i class="fa fa-table"></i> </span>
+				<h2> 使用帮助 </h2>
+			</header>
+			<div>
+				<div class="jarviswidget-editbox">
+				</div>
+				<div class="widget-body">
+					<div class="table-responsive">
+						<table class="table table-bordered">
+							<thead>
+								<tr>
+									<th>币种</th>
+									<th>符号</th>
+									<th>算法</th>
+									<th>矿池地址</th>
+									<th>端口和难度</th>
+								</tr>
+							</thead>
+							<tbody>
+							{{ for(var pool in it.poolsConfigs) { }}
+							<tr>
+								<td>{{=it.poolsConfigs[pool].coin.name}}</td>
+								<td>{{=it.poolsConfigs[pool].coin.symbol}}</td>
+								<td>{{=it.poolsConfigs[pool].coin.algorithm}}</td>
+								<td>{{=it.portalConfig.website.stratumHost}}</td>
+								<td>
+								{{ for (var port in it.poolsConfigs[pool].ports) { }}
+									端口号: {{=port}},
+									难度: {{=it.poolsConfigs[pool].ports[port].diff}}
+								{{ } }}
+								</td>
+							</tr>
+							{{ } }}	
+            						</tbody>	
+						</table>		
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+</div>
